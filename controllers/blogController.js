@@ -1,4 +1,3 @@
-const express = require("express");
 const Blog = require("../models/Blog");
 
 // Gets all blog posts.
