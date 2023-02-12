@@ -1,13 +1,13 @@
 const bcrypt = require("bcrypt");
-const usersRouter = require("express").Router();
+const userRouter = require("express").Router();
 const User = require("../models/User");
 
-usersRouter.get("/", async (req, res) => {
+userRouter.get("/", async (req, res) => {
   const users = await User.find({});
   res.json(users.data);
 });
 
-usersRouter.post("/", async (req, res) => {
+userRouter.post("/", async (req, res) => {
   const { username, name, password } = req.body;
 
   if (password.length < 3) {

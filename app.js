@@ -14,7 +14,7 @@ const loginRouter = require("./controllers/loginController");
 const userRouter = require("./controllers/userController");
 
 
-mongoose.connect(config.MONGO_DB);
+mongoose.connect(config.MONGODB_URL);
 
 app.use(cors);
 app.use(express.json());

@@ -1,4 +1,5 @@
 const Blog = require("../models/Blog");
+const blogRouter = require("express").Router();
 
 // Gets all blog posts.
 blogRouter.get("/api/blog", async (req, res) => {
